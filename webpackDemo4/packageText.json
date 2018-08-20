@@ -1,0 +1,27 @@
+{
+  "name": "webpackDemo4",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,//使其私有不会意外发布
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",//用于启动 webpack 的观察模式的 npm script 脚本
+    "start": "webpack-dev-server --open",//直接运行开发服务器
+    "server": "node server.js",//添加一个 npm script，以使我们更方便地运行服务
+    "build": "webpack"//添加npm脚本 npm run build代替npx webpack
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",//清除文件依赖
+    "webpack-dev-middleware": "^3.1.3",//webpack-dev-middleware 是一个容器(wrapper)，它可以把 webpack 处理后的文件传递给一个服务器(server)
+    "css-loader": "^1.0.0",//css loader依赖
+    "file-loader": "^1.1.11",//资源文件依赖
+    "html-webpack-plugin": "^3.2.0",//更新index.html文件依赖
+    "style-loader": "^0.22.1",//style loader依赖
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"//实时重新加载依赖
+  }
+}
